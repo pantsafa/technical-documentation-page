@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Basic</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="navbar">
+    <header id="title">Intro to HTML</header>
+    <hr>
+    <ul class="nav-menu">
+      <li><a class="nav-link" href="#headings">Headings</a></li>
+      <hr>
+      <li><a class="nav-link" href="#elements">Elements</a></li>
+      <hr>
+      <li><a class="nav-link" href="#attributes">Attributes</a></li>
+      <hr>
+      <li><a class="nav-link" href="#images">Images</a></li>
+      <hr>
+      <li><a class="nav-link" href="#links">Links</a></li>
+      <hr>
+      <li><a class="nav-link" href="#lists">Lists</a></li>
+      <hr>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <article>
+      <div class="content">
+        <section class="main-section" id="headings">
+          <header class="content-title">Headings</header>
+          <p>Among the HTML elements are the 6 heading elements. 
+            They are labeled 1-6, with 1 being the largest sized heading and 6 being the smallest. 
+            These are great for labeling different sections in a website:</p>
+          <code>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </code>
+          <h2>Accessibility with Headings</h2>
+          <p>Each heading has semantic meaning for the overall structure of a page. 
+            Headings have affects on how well a page performs with SEO and how devices like screen readers can access them. 
+            Here are a few best practices for using heading elements in an accessible and SEO-friendly way:</p>
+          <ul>
+            <li>Keep it to one <code>&lt;h1&gt;</code> element to one page. This element should be associated with the main topic of the page.</li>
+            <li>Do not skip levels. Go from <code>&lt;h1&gt;</code> to <code>&lt;h2&gt;</code> and so on.</li>
+            <li>Avoid nesting headings too deeply so they aren’t skipped.</li>
+          </ul>
+        </section>
+        <section class="main-section" id="elements">
+          <header>Elements</header>
+          <p>Elements are discrete components within an HTML document that generally consist of at least one tag but can have two tags with optional content. 
+            The tag name determines how the element will be rendered in the HTML document. 
+            Elements can also have any number of attributes.</p>
+          <h2>Syntax</h2>
+          <p>Elements can be grouped, whether or not they can support content. Elements that can’t have any content are void and self-closing elements. 
+            If an element has attributes, attributes must be attached to the opening tag of the element.</p>
+          <h2>HTML Element with Content</h2>
+          <p>Most HTML elements include opening and closing tags, enclosing the element’s content. The content of an element is optional and can be any of the following:</p>
+          <ul>
+            <li>Text content, which creates raw text elements. For example <code>&lt;title&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;li&gt;</code> elements can only hold text content.</li>
+            <li>Other elements, creating nested elements (see below). Nested elements can also have text content along with the elements.</li>
+            <li>Comments only or in combination with text content and nested elements.</li>
+          </ul>
+          <p>In rare cases, the opening tag can be omitted. For example, the opening tag of <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> can be left out if they are empty.</p>
+          <h2>Void HTML Element</h2>
+          <p>Some elements cannot have content; therefore, they do not require a closing tag. These elements are called void or empty elements.</p>
+          <code class="example-code">&lt;void-element-tag&gt;</code>
+          <h2>Self-Closing HTML Element</h2>
+          <code class="example-code">&lt;self-closing-tag /&gt;</code>
+          <p>Adding a closing slash (/) at the end of the void element’s opening tag is allowed, which creates a self-closing element. Turning void elements into self-closing is up to personal preference, but it improves compatibility with XHTML. 
+            The following elements are void elements:</p>
+          <ul>
+            <li><code>&lt;br&gt;</code></li>
+            <li><code>&lt;link&gt;</code></li>
+            <li><code>&lt;img&gt;</code></li>
+            <li><code>&lt;input&gt;</code></li>
+            <li><code>&lt;hr&gt;</code></li>
+          </ul>
+        </section>
+        <section class="main-section" id="attributes">
+          <header>Attributes</header>
+          <p>HTML attributes are data that can be added to the opening tag of an HTML element. 
+            These attributes modify the default behavior of the element or provide additional information about it.</p>
+          <p>Attributes consist of a name and are usually set equal to a value. Values are enclosed in double or single quotation marks.</p>
+          <h2>Syntax</h2>
+          <p>The syntax for adding attributes to an HTML element is as follows: <br>
+            <code>&lt;tagname attribute="value"&gt;&lt;/tagname&gt;</code> <br>
+            <i><b>Note:</b> Attribute names are not case-sensitive, but it is good practice to write HTML markup in lowercase.</i>
+          </p>
+        </section>
+        <section class="main-section" id="images">
+          <header>Images</header>
+          <p>While many websites are primarily text, embedding images using HTML within a site allows for more lively pages that can be more attractive and informative to visitors. However, when serving images, there are concerns about the impact on page loading speeds as well as accessibility, so knowledge of how images can be best served to users is critical for good development.</p>
+          <h2>Image Formats</h2>
+          <p>Images make up most of the bandwidth for a standard webpage, and therefore can slow the speed of page loads. It is best to optimize the size of images as much as possible ahead of time. While there are a myriad of image formats available, only a few key formats are needed for most use cases:</p>
+          <ul>
+            <li>JPEG: Best for minimizing image sizes at the cost of some graphical fidelity.</li>
+            <li>PNG: Best for images where graphical fidelity is important.</li>
+            <li>SVG: Best for vector images, such as simple symbols and shapes.</li>
+          </ul>
+          <p>There are also new image formats such as AVIF and WebP that are attempting to replace JPEG. While their browser support may currently be limited, their reductions in file sizes are significant.</p>
+          <h2>Inserting and Sizing an Image</h2>
+          <p>Below is an example of how an image is commonly inserted into a page using the HTML <code>&lt;img&gt;</code> element:</p>
+          <code>&lt;img src="logo.png" alt="company logo" /&gt;</code>
+          <p>It is recommended to specify the image’s width and height using the percent of the current screen size to best support both smaller mobile devices as well as larger workstations. The image below would take up the top half of any screen, regardless of its size:</p>
+          <code>&lt;img src="logo.png" alt="company logo" style="height:50%; width: 100%;" /&gt;</code>
+          <p>However, this may lead to stretched images on wider screens, so setting a maximum width may be preferred:</p>
+          <code>&lt;img src="logo.png" alt="company logo" style="height:50%; max-width: 100%;" /&gt;</code>
+        </section>
+        <section class="main-section" id="links">
+          <header>Links</header>
+          <p><b>Links</b> are used in HTML to add features to a web page including styling, functionality, hyperlinks, and navigation.</p>
+          <h2>Hyperlinks</h2>
+          <p>The <code>&lt;a&gt;</code> anchor tag is used to create hyperlinks in an HTML document. The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL using the hyperlink reference href attribute.</p>
+          <h3>Text Links</h3>
+          <p>Text wrapped in a linked anchor tag becomes a hyperlink to another page:</p>
+          <code>
+            &lt;!-- Creating a text link --&gt;<br>
+            &lt;a href="http://www.freecodecamp.org"&gt;Visit this site&lt;/a&gt;
+          </code>
+          <h3>Internal Links</h3>
+          <p>Anchor tags can be used to link to certain parts of a page with a matching id attribute:</p>
+          <code>
+            &lt;!-- Creating a text link --&gt;<br>
+            &lt;a href="#about"&gt;About&lt;/a&gt;
+          </code>
+          <h3>Image Links</h3>
+          <p>Anything that is inside the anchor tag will be treated as a link. In this case, the Codecademy logo will take the user to the Codecademy home page:</p>
+          <code>
+            &lt;!-- Creating an image link --&gt;<br>
+            &lt;a href="http://www.freecodecamp.org"&gt; &lt;img src="logo.jpg" /&gt;Click this image &lt;/a&gt;
+          </code>
+          <h2>&lt;link&gt; Element</h2>
+          <p>The <code>&lt;link&gt;</code> element is used to connect the document to an outside resource, most commonly stylesheets, via the <code>&lt;head&gt;</code> element. Unlike most elements, which come as opening and closing tags, the <code>&lt;link /&gt;</code> is self-closing and only contains attributes.</p>
+          <p>The two primary attributes are:</p>
+          <ul>
+            <li>A rel to describe the format of the external source.</li>
+            <li>An href that contains the filepath to the external source.</li>
+          </ul>
+          <code>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html lang="en"&gt;<br>
+              &lt;head&gt;<br>
+                &lt;title&gt;Links in HTML&lt;/title&gt;<br>
+                &lt;link rel="stylesheet" href="some/outside/source.css" /&gt;<br>
+              &lt;/head&gt;<br>
+              &lt;body&gt;<br>
+                &lt;!-- markup here --&gt;<br>
+              &lt;/body&gt;<br>
+            &lt;/html&gt;
+          </code>
+        </section>
+        <section class="main-section" id="lists">
+          <header>Lists</header>
+          <p>In HTML, lists are used to group pieces of related data together in a certain format. List items are represented by the <code>&lt;li&gt;</code> tag while the lists themselves are represented by the following:</p>
+          <ul>
+            <li>Ordered lists with items preceded by numbers.</li>
+            <li>Unordered lists with items preceded by dots by default.</li>
+            <li>Unordered menus with more semantic meaning than <code>&lt;ul&gt;</code> and user-interactive list items.</li>
+            <li>Definition lists with terms and details.</li>
+          </ul>
+          <h2>Nesting Lists</h2>
+          <p>Lists can be nested, meaning one list of one kind can be placed inside another list of another kind:</p>
+          <code>
+            &lt;ol&gt;<br>
+              &lt;li&gt;Fruits&lt;/li&gt;<br>
+              &lt;ul&gt;<br>
+                &lt;li&gt;Apples 🍎&lt;/li&gt;<br>
+                &lt;li&gt;Oranges 🍊&lt;/li&gt;<br>
+              &lt;/ul&gt;<br>
+              &lt;li&gt;Vegetables&lt;/li&gt;<br>
+              &lt;ul&gt;<br>
+                &lt;li&gt;Tomatoes 🍅&lt;/li&gt;<br>
+              &lt;/ul&gt;<br>
+            &lt;/ol&gt;<br>
+          </code>
+          <p>This way, multilevel lists can be created with different indentations.</p>
+        </section>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+html {
+    box-sizing: border-box;
+    font-family: 'AR One Sans', sans-serif;
+  }
+  body{
+    background-color: beige;
+    margin: 0;
+    padding: 5px;
+  }
+  #navbar {
+    display: inline-block;
+    position: fixed;
+    border-right: 3px solid grey;
+    width: 250px;
+  }
+  #main-doc {
+    display: inline-block;
+    position: absolute;
+    left: 300px;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    list-style: none;
+    cursor: pointer;
+    color: black;
+    margin-left: 0;
+  }
+  .nav-menu:hover(2) {
+    color: grey;
+  }
+  header {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+  li > hr {
+    background-color: black;
+    border: 1px solid grey;
+  }
+  .nav-link {
+    color: black;
+    text-decoration: none;
+    height: 50px;
+  }
+  @media (max-width: 350px) {
+    .nav-menu {
+      display: inline-block;
+      position: relative;
+      width: 350px;
+      height: 100px;
+      text-align: left;
+    }
+    #main-doc {
+      display: block;
+      width: 350px;
+      position: absolute;
+      top: 300px;
+    }
+  }
+  
